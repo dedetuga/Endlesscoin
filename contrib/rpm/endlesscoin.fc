@@ -1,0 +1,8 @@
+/usr/bin/endlesscoin-cli		--	gen_context(system_u:object_r:endlesscoin_exec_t,s0)
+/usr/sbin/endlesscoind		--	gen_context(system_u:object_r:endlesscoin_exec_t,s0)
+/usr/lib(64)?/endlesscoin/endlesscoind		--	gen_context(system_u:object_r:endlesscoin_exec_t,s0)
+
+/etc/endlesscoin(/.*)?		gen_context(system_u:object_r:endlesscoin_conf_t,s0)
+/var/lib/endlesscoin(/.*)?		gen_context(system_u:object_r:endlesscoin_var_lib_t,s0)
+
+(/var)?/run/endlesscoind(/.*)?   gen_context(system_u:object_r:endlesscoin_var_run_t,s0)

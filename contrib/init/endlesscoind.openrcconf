@@ -1,0 +1,33 @@
+# /etc/conf.d/endlesscoind: config file for /etc/init.d/endlesscoind
+
+# Config file location
+#ENDLESSCOIND_CONFIGFILE="/etc/endlesscoin/endlesscoin.conf"
+
+# What directory to write pidfile to?  (created and owned by $ENDLESSCOIND_USER)
+#ENDLESSCOIND_PIDDIR="/var/run/endlesscoind"
+
+# What filename to give the pidfile
+#ENDLESSCOIND_PIDFILE="${ENDLESSCOIND_PIDDIR}/endlesscoind.pid"
+
+# Where to write endlesscoind data (be mindful that the blockchain is large)
+#ENDLESSCOIND_DATADIR="/var/lib/endlesscoind"
+
+# User and group to own endlesscoind process
+#ENDLESSCOIND_USER="endlesscoin"
+#ENDLESSCOIND_GROUP="endlesscoin"
+
+# Path to endlesscoind executable
+#ENDLESSCOIND_BIN="/usr/bin/endlesscoind"
+
+# Nice value to run endlesscoind under
+#ENDLESSCOIND_NICE=0
+
+# Additional options (avoid -conf and -datadir, use flags above)
+#ENDLESSCOIND_OPTS=""
+
+# The timeout in seconds OpenRC will wait for endlesscoind to terminate
+# after a SIGTERM has been raised.
+# Note that this will be mapped as argument to start-stop-daemon's
+# '--retry' option, which means you can specify a retry schedule
+# here. For more information see man 8 start-stop-daemon.
+ENDLESSCOIND_SIGTERM_TIMEOUT=60

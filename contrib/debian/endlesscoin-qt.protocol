@@ -1,0 +1,11 @@
+[Protocol]
+exec=endlesscoin-qt '%u'
+protocol=endlesscoin
+input=none
+output=none
+helper=true
+listing=
+reading=false
+writing=false
+makedir=false
+deleting=false

@@ -1,0 +1,6 @@
+usr/local/bin/endlesscoin-qt usr/bin
+share/pixmaps/endlesscoin32.xpm usr/share/pixmaps
+share/pixmaps/endlesscoin16.xpm usr/share/pixmaps
+share/pixmaps/endlesscoin128.png usr/share/pixmaps
+debian/endlesscoin-qt.desktop usr/share/applications
+debian/endlesscoin-qt.protocol usr/share/kde4/services/

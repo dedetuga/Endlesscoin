@@ -1,0 +1,13 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=EndessCoin Core
+Comment=Connect to the EndessCoin P2P Network
+Comment[de]=Verbinde mit dem EndessCoin peer-to-peer Netzwerk
+Comment[fr]=EndessCoin, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=EndessCoin, eşten eşe kriptografik sanal para birimi
+Exec=endlesscoin-qt %u
+Terminal=false
+Type=Application
+Icon=endlesscoin128
+MimeType=x-scheme-handler/endlesscoin;
+Categories=Office;Finance;
