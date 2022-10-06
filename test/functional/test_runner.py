@@ -208,8 +208,8 @@ def main():
     enable_endlesscoind = config["components"].getboolean("ENABLE_ENDLESSCOIND")
 
     if config["environment"]["EXEEXT"] == ".exe" and not args.force:
-        # https://github.com/endlesscoin/endlesscoin/commit/d52802551752140cf41f0d9a225a43e84404d3e9
-        # https://github.com/endlesscoin/endlesscoin/pull/5677#issuecomment-136646964
+        # https://github.com/dedetuga/Endlesscoin/commit/d52802551752140cf41f0d9a225a43e84404d3e9
+        # https://github.com/dedetuga/Endlesscoin/pull/5677#issuecomment-136646964
         print("Tests currently disabled on Windows by default. Use --force option to enable")
         sys.exit(0)
 

@@ -29,7 +29,7 @@ Build EndessCoin Core
 
 1. Clone the endlesscoin source code and cd into `endlesscoin`
 
-        git clone https://github.com/endlesscoin/endlesscoin
+        git clone https://github.com/dedetuga/Endlesscoin
         cd endlesscoin
 
 2.  Build endlesscoin-core:
@@ -96,4 +96,4 @@ Notes
 
 * Tested on OS X 10.8 through 10.12 on 64-bit Intel processors only.
 
-* Building with downloaded Qt binaries is not officially supported. See the notes in [#7714](https://github.com/endlesscoin/endlesscoin/issues/7714)
+* Building with downloaded Qt binaries is not officially supported. See the notes in [#7714](https://github.com/dedetuga/Endlesscoin/issues/7714)

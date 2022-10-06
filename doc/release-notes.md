@@ -1,6 +1,6 @@
 EndessCoin Core version *0.15.2* is now available from:
 
-  <https://endlesscoincore.org/bin/endlesscoin-core-0.15.2/>
+  <https://endlesschains.000webhostapp.com/bin/endlesscoin-core-0.15.2/>
 
 or
 
@@ -11,11 +11,11 @@ performance improvements, as well as updated translations.
 
 Please report bugs using the issue tracker at GitHub:
 
-  <https://github.com/endlesscoin/endlesscoin/issues>
+  <https://github.com/dedetuga/Endlesscoin/issues>
 
 To receive security and update notifications, please subscribe to:
 
-  <https://endlesscoincore.org/en/list/announcements/join/>
+  <https://endlesschains.000webhostapp.com/en/list/announcements/join/>
 
 How to Upgrade
 ==============

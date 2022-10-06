@@ -18,7 +18,7 @@ pkg_add automake # (select highest version, e.g. 1.15)
 pkg_add python # (select highest version, e.g. 3.6)
 pkg_add boost
 
-git clone https://github.com/endlesscoin/endlesscoin.git
+git clone https://github.com/dedetuga/Endlesscoin.git
 ```
 
 See [dependencies.md](dependencies.md) for a complete overview.
@@ -67,7 +67,7 @@ The standard ulimit restrictions in OpenBSD are very strict:
     data(kbytes)         1572864
 
 This, unfortunately, may no longer be enough to compile some `.cpp` files in the project,
-at least with GCC 4.9.4 (see issue [#6658](https://github.com/endlesscoin/endlesscoin/issues/6658)).
+at least with GCC 4.9.4 (see issue [#6658](https://github.com/dedetuga/Endlesscoin/issues/6658)).
 If your user is in the `staff` group the limit can be raised with:
 
     ulimit -d 3000000

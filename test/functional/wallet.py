@@ -354,7 +354,7 @@ class WalletTest(EndessCoinTestFramework):
             '-reindex',
             '-zapwallettxes=1',
             '-zapwallettxes=2',
-            # disabled until issue is fixed: https://github.com/endlesscoin/endlesscoin/issues/7463
+            # disabled until issue is fixed: https://github.com/dedetuga/Endlesscoin/issues/7463
             # '-salvagewallet',
         ]
         chainlimit = 6

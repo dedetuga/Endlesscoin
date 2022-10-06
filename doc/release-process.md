@@ -3,9 +3,9 @@ Release Process
 
 Before every release candidate:
 
-* Update translations (ping wumpus on IRC) see [translation_process.md](https://github.com/endlesscoin/endlesscoin/blob/master/doc/translation_process.md#synchronising-translations).
+* Update translations (ping wumpus on IRC) see [translation_process.md](https://github.com/dedetuga/Endlesscoin/blob/master/doc/translation_process.md#synchronising-translations).
 
-* Update manpages, see [gen-manpages.sh](https://github.com/endlesscoin/endlesscoin/blob/master/contrib/devtools/README.md#gen-manpagessh).
+* Update manpages, see [gen-manpages.sh](https://github.com/dedetuga/Endlesscoin/blob/master/contrib/devtools/README.md#gen-manpagessh).
 
 Before every minor and major release:
 
@@ -21,7 +21,7 @@ Before every minor and major release:
 
 Before every major release:
 
-* Update hardcoded [seeds](/contrib/seeds/README.md), see [this pull request](https://github.com/endlesscoin/endlesscoin/pull/7415) for an example.
+* Update hardcoded [seeds](/contrib/seeds/README.md), see [this pull request](https://github.com/dedetuga/Endlesscoin/pull/7415) for an example.
 * Update [`BLOCK_CHAIN_SIZE`](/src/qt/intro.cpp) to the current size plus some overhead.
 * Update `src/chainparams.cpp` chainTxData with statistics about the transaction count and rate.
 * Update version of `contrib/gitian-descriptors/*.yml`: usually one'd want to do this on master after branching off the release - but be sure to at least do it before a new major release
@@ -36,7 +36,7 @@ Check out the source code in the following directory hierarchy.
     git clone https://github.com/endlesscoin-core/gitian.sigs.git
     git clone https://github.com/endlesscoin-core/endlesscoin-detached-sigs.git
     git clone https://github.com/devrandom/gitian-builder.git
-    git clone https://github.com/endlesscoin/endlesscoin.git
+    git clone https://github.com/dedetuga/Endlesscoin.git
 
 ### EndessCoin maintainers/release engineers, suggestion for writing release notes
 
@@ -84,7 +84,7 @@ Ensure gitian-builder is up-to-date:
 
     pushd ./gitian-builder
     mkdir -p inputs
-    wget -P inputs https://endlesscoincore.org/cfields/osslsigncode-Backports-to-1.7.1.patch
+    wget -P inputs https://endlesschains.000webhostapp.com/cfields/osslsigncode-Backports-to-1.7.1.patch
     wget -P inputs http://downloads.sourceforge.net/project/osslsigncode/osslsigncode/osslsigncode-1.7.1.tar.gz
     popd
 
@@ -292,9 +292,9 @@ endlesscoin.org (see below for endlesscoin.org update instructions).
 
   - endlesscoin-dev and endlesscoin-core-dev mailing list
 
-  - EndessCoin Core announcements list https://endlesscoincore.org/en/list/announcements/join/
+  - EndessCoin Core announcements list https://endlesschains.000webhostapp.com/en/list/announcements/join/
 
-  - endlesscoincore.org blog post
+  - endlesschains.000webhostapp.com blog post
 
   - Update title of #endlesscoin on Freenode IRC
 
@@ -304,6 +304,6 @@ endlesscoin.org (see below for endlesscoin.org update instructions).
 
   - Archive release notes for the new version to `doc/release-notes/` (branch `master` and branch of the release)
 
-  - Create a [new GitHub release](https://github.com/endlesscoin/endlesscoin/releases/new) with a link to the archived release notes.
+  - Create a [new GitHub release](https://github.com/dedetuga/Endlesscoin/releases/new) with a link to the archived release notes.
 
   - Celebrate
