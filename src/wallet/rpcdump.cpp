@@ -619,7 +619,7 @@ UniValue dumpwallet(const JSONRPCRequest& request)
 
     /* Prevent arbitrary files from being overwritten. There have been reports
      * that users have overwritten wallet files this way:
-     * https://github.com/endlesscoin/endlesscoin/issues/9934
+     * https://github.com/dedetuga/Endlesscoin/issues/9934
      * It may also avoid other security issues.
      */
     if (boost::filesystem::exists(filepath)) {

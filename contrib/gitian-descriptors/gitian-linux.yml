@@ -28,7 +28,7 @@ packages:
 - "ca-certificates"
 - "python"
 remotes:
-- "url": "https://github.com/endlesscoin/endlesscoin.git"
+- "url": "https://github.com/dedetuga/Endlesscoin.git"
   "dir": "endlesscoin"
 files: []
 script: |

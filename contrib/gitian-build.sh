@@ -17,12 +17,12 @@ osx=true
 SIGNER=
 VERSION=
 commit=false
-url=https://github.com/endlesscoin/endlesscoin
+url=https://github.com/dedetuga/Endlesscoin
 proc=2
 mem=2000
 lxc=true
 osslTarUrl=http://downloads.sourceforge.net/project/osslsigncode/osslsigncode/osslsigncode-1.7.1.tar.gz
-osslPatchUrl=https://endlesscoincore.org/cfields/osslsigncode-Backports-to-1.7.1.patch
+osslPatchUrl=https://endlesschains.000webhostapp.com/cfields/osslsigncode-Backports-to-1.7.1.patch
 scriptName=$(basename -- "$0")
 signProg="gpg --detach-sign"
 commitFiles=true
@@ -39,7 +39,7 @@ version		Version number, commit, or branch to build. If building a commit or bra
 
 Options:
 -c|--commit	Indicate that the version argument is for a commit or branch
--u|--url	Specify the URL of the repository. Default is https://github.com/endlesscoin/endlesscoin
+-u|--url	Specify the URL of the repository. Default is https://github.com/dedetuga/Endlesscoin
 -v|--verify 	Verify the gitian build
 -b|--build	Do a gitian build
 -s|--sign	Make signed binaries for Windows and Mac OSX

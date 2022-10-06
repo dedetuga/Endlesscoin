@@ -3,7 +3,7 @@ EndessCoin Core integration/staging tree
 
 [![Build Status](https://travis-ci.org/endlesscoin/endlesscoin.svg?branch=master)](https://travis-ci.org/endlesscoin/endlesscoin)
 
-https://endlesscoincore.org
+https://endlesschains.000webhostapp.com
 
 What is EndessCoin?
 ----------------
@@ -16,7 +16,7 @@ software which enables the use of this currency.
 
 For more information, as well as an immediately useable, binary version of
 the EndessCoin Core software, see https://endlesscoin.org/en/download, or read the
-[original whitepaper](https://endlesscoincore.org/endlesscoin.pdf).
+[original whitepaper](https://endlesschains.000webhostapp.com/endlesscoin.pdf).
 
 License
 -------
@@ -28,7 +28,7 @@ Development Process
 -------------------
 
 The `master` branch is regularly built and tested, but is not guaranteed to be
-completely stable. [Tags](https://github.com/endlesscoin/endlesscoin/tags) are created
+completely stable. [Tags](https://github.com/dedetuga/Endlesscoin/tags) are created
 regularly to indicate new official, stable release versions of EndessCoin Core.
 
 The contribution workflow is described in [CONTRIBUTING.md](CONTRIBUTING.md).

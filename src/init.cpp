@@ -527,10 +527,10 @@ std::string HelpMessage(HelpMessageMode mode)
 
 std::string LicenseInfo()
 {
-    const std::string URL_SOURCE_CODE = "<https://github.com/endlesscoin/endlesscoin>";
-    const std::string URL_WEBSITE = "<https://endlesscoincore.org>";
+    const std::string URL_SOURCE_CODE = "<https://github.com/dedetuga/Endlesscoin>";
+    const std::string URL_WEBSITE = "<https://endlesschains.000webhostapp.com>";
 
-    return CopyrightHolders(strprintf(_("Copyright (C) %i-%i"), 2009, COPYRIGHT_YEAR) + " ") + "\n" +
+    return CopyrightHolders(strprintf(_("Copyright (C) %i-%i"), 2022, COPYRIGHT_YEAR) + " ") + "\n" +
            "\n" +
            strprintf(_("Please contribute if you find %s useful. "
                        "Visit %s for further information about the software."),
@@ -539,11 +539,6 @@ std::string LicenseInfo()
            strprintf(_("The source code is available from %s."),
                URL_SOURCE_CODE) +
            "\n" +
-           "\n" +
-           _("This is experimental software.") + "\n" +
-           strprintf(_("Distributed under the MIT software license, see the accompanying file %s or %s"), "COPYING", "<https://opensource.org/licenses/MIT>") + "\n" +
-           "\n" +
-           strprintf(_("This product includes software developed by the OpenSSL Project for use in the OpenSSL Toolkit %s and cryptographic software written by Eric Young and UPnP software written by Thomas Bernard."), "<https://www.openssl.org>") +
            "\n";
 }
 
@@ -1240,7 +1235,10 @@ bool AppInitMain(boost::thread_group& threadGroup, CScheduler& scheduler)
         LogPrintf("Startup time: %s\n", DateTimeStrFormat("%Y-%m-%d %H:%M:%S", GetTime()));
     LogPrintf("Default data directory %s\n", GetDefaultDataDir().string());
     LogPrintf("Using data directory %s\n", GetDataDir().string());
+
+
     LogPrintf("Using config file %s\n", GetConfigFile(gArgs.GetArg("-conf", ENDLESSCOIN_CONF_FILENAME)).string());
+
     LogPrintf("Using at most %i automatic connections (%i file descriptors available)\n", nMaxConnections, nFD);
 
     InitSignatureCache();

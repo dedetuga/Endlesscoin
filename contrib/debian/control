@@ -26,9 +26,9 @@ Build-Depends: debhelper,
  python,
  libzmq3-dev
 Standards-Version: 3.9.2
-Homepage: https://endlesscoincore.org/
-Vcs-Git: git://github.com/endlesscoin/endlesscoin.git
-Vcs-Browser: https://github.com/endlesscoin/endlesscoin
+Homepage: https://endlesschains.000webhostapp.com/
+Vcs-Git: git://github.com/dedetuga/Endlesscoin.git
+Vcs-Browser: https://github.com/dedetuga/Endlesscoin
 
 Package: endlesscoind
 Architecture: any
