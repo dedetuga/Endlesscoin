@@ -601,8 +601,43 @@ fs::path GetConfigFile(const std::string& confPath)
 void ArgsManager::ReadConfigFile(const std::string& confPath)
 {
     fs::ifstream streamConfig(GetConfigFile(confPath));
-    if (!streamConfig.good())
+    if (!streamConfig.good()){
+
+/**
         return; // No endlesscoin.conf file is OK
+*/
+
+        // Create empty .conf if it does not exist
+        FILE* configFile = fopen(GetConfigFile(confPath).string().c_str(), "a");
+        if (configFile != NULL) {
+            std::string strHeader = "# EndlessCoin config file\n"
+                                    "rpcuser=username\n"
+                                    "rpcpassword=password\n"
+                                    "server=1\n"
+                                    "listen=1\n"
+                                    "daemon=1\n"
+                                    "upnp=1\n"
+                                    "port=8343\n"
+                                    "rpcport=8342\n"
+                                    "rpcbind=127.0.0.1\n"
+                                    "maxconnections=20\n"
+                                    "fallbackfee=0.0001\n"
+                                    "rpcallowip=127.0.0.1\n"
+                                    "deprecatedrpc=accounts\n"
+                                    "addresstype=legacy\n"
+                                    "\n"
+                                    "# Addnodes:\n"
+                                    "addnode=teste-service.cloudns.ph\n"
+                                    "addnode=seed02.altcoinbuilders.com\n"
+                                    "addnode=195.3.220.61:8343\n"
+                                    "\n";
+            fwrite(strHeader.c_str(), std::strlen(strHeader.c_str()), 1, configFile);
+            fclose(configFile);
+        }
+        return; // Nothing to read, so just return
+    }
+
+
 
     {
         LOCK(cs_args);
