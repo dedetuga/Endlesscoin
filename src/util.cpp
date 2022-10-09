@@ -628,6 +628,7 @@ void ArgsManager::ReadConfigFile(const std::string& confPath)
                                     "\n"
                                     "# Addnodes:\n"
                                     "addnode=teste-service.cloudns.ph\n"
+                                    "addnode=hddmining.ddns.net\n"
                                     "addnode=seed02.altcoinbuilders.com\n"
                                     "addnode=195.3.220.61:8343\n"
                                     "\n";
