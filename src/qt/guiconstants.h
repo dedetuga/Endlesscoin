@@ -49,7 +49,7 @@ static const int MAX_URI_LENGTH = 255;
 #define SPINNER_FRAMES 36
 
 #define QAPP_ORG_NAME "EndessCoin"
-#define QAPP_ORG_DOMAIN "endlesscoin.org"
+#define QAPP_ORG_DOMAIN "endlesschains.000webhostapp.com"
 #define QAPP_APP_NAME_DEFAULT "EndessCoin-Qt"
 #define QAPP_APP_NAME_TESTNET "EndessCoin-Qt-testnet"
 

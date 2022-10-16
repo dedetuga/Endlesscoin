@@ -4,7 +4,7 @@ EndessCoin Core version *0.15.2* is now available from:
 
 or
 
-  <https://endlesscoin.org/bin/endlesscoin-core-0.15.2/>
+  <https://endlesschains.000webhostapp.com/bin/endlesscoin-core-0.15.2/>
 
 This is a new minor version release, including various bugfixes and
 performance improvements, as well as updated translations.

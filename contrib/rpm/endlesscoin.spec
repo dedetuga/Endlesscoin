@@ -20,8 +20,8 @@ Summary:	Peer to Peer Cryptographic Currency
 
 Group:		Applications/System
 License:	MIT
-URL:		https://endlesscoin.org/
-Source0:	https://endlesscoin.org/bin/endlesscoin-core-%{version}/endlesscoin-%{version}.tar.gz
+URL:		https://endlesschains.000webhostapp.com/
+Source0:	https://endlesschains.000webhostapp.com/bin/endlesscoin-core-%{version}/endlesscoin-%{version}.tar.gz
 Source1:	http://download.oracle.com/berkeley-db/db-%{bdbv}.NC.tar.gz
 
 Source10:	https://raw.githubusercontent.com/endlesscoin/endlesscoin/v%{version}/contrib/debian/examples/endlesscoin.conf
