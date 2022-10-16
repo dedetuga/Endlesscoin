@@ -1,4 +1,4 @@
-# Copyright (c) 2016 The endlesscoin Core developers
+# Copyright (c) 2016 The Endlesscoin Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -30,7 +30,7 @@ commitFiles=true
 read -d '' usage <<- EOF
 Usage: $scriptName [-c|u|v|b|s|B|o|h|j|m|] signer version
 
-Run this script from the directory containing the endlesscoin, gitian-builder, gitian.sigs, and endlesscoin-detached-sigs.
+Run this script from the directory containing the Endlesscoin, gitian-builder, gitian.sigs, and Endlesscoin-detached-sigs.
 
 Arguments:
 signer          GPG signer to sign each build assert file
@@ -229,8 +229,8 @@ echo ${COMMIT}
 if [[ $setup = true ]]
 then
     sudo apt-get install ruby apache2 git apt-cacher-ng python-vm-builder qemu-kvm qemu-utils
-    git clone https://github.com/endlesscoin-core/gitian.sigs.git
-    git clone https://github.com/endlesscoin-core/endlesscoin-detached-sigs.git
+    git clone https://github.com/Endlesscoin-core/gitian.sigs.git
+    git clone https://github.com/Endlesscoin-core/Endlesscoin-detached-sigs.git
     git clone https://github.com/devrandom/gitian-builder.git
     pushd ./gitian-builder
     if [[ -n "$USE_LXC" ]]
@@ -244,7 +244,7 @@ then
 fi
 
 # Set up build
-pushd ./endlesscoin
+pushd ./Endlesscoin
 git fetch
 git checkout ${COMMIT}
 popd
@@ -253,7 +253,7 @@ popd
 if [[ $build = true ]]
 then
 	# Make output folder
-	mkdir -p ./endlesscoin-binaries/${VERSION}
+	mkdir -p ./Endlesscoin-binaries/${VERSION}
 	
 	# Build Dependencies
 	echo ""
@@ -263,7 +263,7 @@ then
 	mkdir -p inputs
 	wget -N -P inputs $osslPatchUrl
 	wget -N -P inputs $osslTarUrl
-	make -C ../endlesscoin/depends download SOURCES_PATH=`pwd`/cache/common
+	make -C ../Endlesscoin/depends download SOURCES_PATH=`pwd`/cache/common
 
 	# Linux
 	if [[ $linux = true ]]
@@ -271,9 +271,9 @@ then
             echo ""
 	    echo "Compiling ${VERSION} Linux"
 	    echo ""
-	    ./bin/gbuild -j ${proc} -m ${mem} --commit endlesscoin=${COMMIT} --url endlesscoin=${url} ../endlesscoin/contrib/gitian-descriptors/gitian-linux.yml
-	    ./bin/gsign -p $signProg --signer $SIGNER --release ${VERSION}-linux --destination ../gitian.sigs/ ../endlesscoin/contrib/gitian-descriptors/gitian-linux.yml
-	    mv build/out/endlesscoin-*.tar.gz build/out/src/endlesscoin-*.tar.gz ../endlesscoin-binaries/${VERSION}
+	    ./bin/gbuild -j ${proc} -m ${mem} --commit Endlesscoin=${COMMIT} --url Endlesscoin=${url} ../Endlesscoin/contrib/gitian-descriptors/gitian-linux.yml
+	    ./bin/gsign -p $signProg --signer $SIGNER --release ${VERSION}-linux --destination ../gitian.sigs/ ../Endlesscoin/contrib/gitian-descriptors/gitian-linux.yml
+	    mv build/out/Endlesscoin-*.tar.gz build/out/src/Endlesscoin-*.tar.gz ../Endlesscoin-binaries/${VERSION}
 	fi
 	# Windows
 	if [[ $windows = true ]]
@@ -281,10 +281,10 @@ then
 	    echo ""
 	    echo "Compiling ${VERSION} Windows"
 	    echo ""
-	    ./bin/gbuild -j ${proc} -m ${mem} --commit endlesscoin=${COMMIT} --url endlesscoin=${url} ../endlesscoin/contrib/gitian-descriptors/gitian-win.yml
-	    ./bin/gsign -p $signProg --signer $SIGNER --release ${VERSION}-win-unsigned --destination ../gitian.sigs/ ../endlesscoin/contrib/gitian-descriptors/gitian-win.yml
-	    mv build/out/endlesscoin-*-win-unsigned.tar.gz inputs/endlesscoin-win-unsigned.tar.gz
-	    mv build/out/endlesscoin-*.zip build/out/endlesscoin-*.exe ../endlesscoin-binaries/${VERSION}
+	    ./bin/gbuild -j ${proc} -m ${mem} --commit Endlesscoin=${COMMIT} --url Endlesscoin=${url} ../Endlesscoin/contrib/gitian-descriptors/gitian-win.yml
+	    ./bin/gsign -p $signProg --signer $SIGNER --release ${VERSION}-win-unsigned --destination ../gitian.sigs/ ../Endlesscoin/contrib/gitian-descriptors/gitian-win.yml
+	    mv build/out/Endlesscoin-*-win-unsigned.tar.gz inputs/Endlesscoin-win-unsigned.tar.gz
+	    mv build/out/Endlesscoin-*.zip build/out/Endlesscoin-*.exe ../Endlesscoin-binaries/${VERSION}
 	fi
 	# Mac OSX
 	if [[ $osx = true ]]
@@ -292,10 +292,10 @@ then
 	    echo ""
 	    echo "Compiling ${VERSION} Mac OSX"
 	    echo ""
-	    ./bin/gbuild -j ${proc} -m ${mem} --commit endlesscoin=${COMMIT} --url endlesscoin=${url} ../endlesscoin/contrib/gitian-descriptors/gitian-osx.yml
-	    ./bin/gsign -p $signProg --signer $SIGNER --release ${VERSION}-osx-unsigned --destination ../gitian.sigs/ ../endlesscoin/contrib/gitian-descriptors/gitian-osx.yml
-	    mv build/out/endlesscoin-*-osx-unsigned.tar.gz inputs/endlesscoin-osx-unsigned.tar.gz
-	    mv build/out/endlesscoin-*.tar.gz build/out/endlesscoin-*.dmg ../endlesscoin-binaries/${VERSION}
+	    ./bin/gbuild -j ${proc} -m ${mem} --commit Endlesscoin=${COMMIT} --url Endlesscoin=${url} ../Endlesscoin/contrib/gitian-descriptors/gitian-osx.yml
+	    ./bin/gsign -p $signProg --signer $SIGNER --release ${VERSION}-osx-unsigned --destination ../gitian.sigs/ ../Endlesscoin/contrib/gitian-descriptors/gitian-osx.yml
+	    mv build/out/Endlesscoin-*-osx-unsigned.tar.gz inputs/Endlesscoin-osx-unsigned.tar.gz
+	    mv build/out/Endlesscoin-*.tar.gz build/out/Endlesscoin-*.dmg ../Endlesscoin-binaries/${VERSION}
 	fi
 	popd
 
@@ -322,27 +322,27 @@ then
 	echo ""
 	echo "Verifying v${VERSION} Linux"
 	echo ""
-	./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-linux ../endlesscoin/contrib/gitian-descriptors/gitian-linux.yml
+	./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-linux ../Endlesscoin/contrib/gitian-descriptors/gitian-linux.yml
 	# Windows
 	echo ""
 	echo "Verifying v${VERSION} Windows"
 	echo ""
-	./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-win-unsigned ../endlesscoin/contrib/gitian-descriptors/gitian-win.yml
+	./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-win-unsigned ../Endlesscoin/contrib/gitian-descriptors/gitian-win.yml
 	# Mac OSX	
 	echo ""
 	echo "Verifying v${VERSION} Mac OSX"
 	echo ""	
-	./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-osx-unsigned ../endlesscoin/contrib/gitian-descriptors/gitian-osx.yml
+	./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-osx-unsigned ../Endlesscoin/contrib/gitian-descriptors/gitian-osx.yml
 	# Signed Windows
 	echo ""
 	echo "Verifying v${VERSION} Signed Windows"
 	echo ""
-	./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-osx-signed ../endlesscoin/contrib/gitian-descriptors/gitian-osx-signer.yml
+	./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-osx-signed ../Endlesscoin/contrib/gitian-descriptors/gitian-osx-signer.yml
 	# Signed Mac OSX
 	echo ""
 	echo "Verifying v${VERSION} Signed Mac OSX"
 	echo ""
-	./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-osx-signed ../endlesscoin/contrib/gitian-descriptors/gitian-osx-signer.yml	
+	./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-osx-signed ../Endlesscoin/contrib/gitian-descriptors/gitian-osx-signer.yml	
 	popd
 fi
 
@@ -357,10 +357,10 @@ then
 	    echo ""
 	    echo "Signing ${VERSION} Windows"
 	    echo ""
-	    ./bin/gbuild -i --commit signature=${COMMIT} ../endlesscoin/contrib/gitian-descriptors/gitian-win-signer.yml
-	    ./bin/gsign -p $signProg --signer $SIGNER --release ${VERSION}-win-signed --destination ../gitian.sigs/ ../endlesscoin/contrib/gitian-descriptors/gitian-win-signer.yml
-	    mv build/out/endlesscoin-*win64-setup.exe ../endlesscoin-binaries/${VERSION}
-	    mv build/out/endlesscoin-*win32-setup.exe ../endlesscoin-binaries/${VERSION}
+	    ./bin/gbuild -i --commit signature=${COMMIT} ../Endlesscoin/contrib/gitian-descriptors/gitian-win-signer.yml
+	    ./bin/gsign -p $signProg --signer $SIGNER --release ${VERSION}-win-signed --destination ../gitian.sigs/ ../Endlesscoin/contrib/gitian-descriptors/gitian-win-signer.yml
+	    mv build/out/Endlesscoin-*win64-setup.exe ../Endlesscoin-binaries/${VERSION}
+	    mv build/out/Endlesscoin-*win32-setup.exe ../Endlesscoin-binaries/${VERSION}
 	fi
 	# Sign Mac OSX
 	if [[ $osx = true ]]
@@ -368,9 +368,9 @@ then
 	    echo ""
 	    echo "Signing ${VERSION} Mac OSX"
 	    echo ""
-	    ./bin/gbuild -i --commit signature=${COMMIT} ../endlesscoin/contrib/gitian-descriptors/gitian-osx-signer.yml
-	    ./bin/gsign -p $signProg --signer $SIGNER --release ${VERSION}-osx-signed --destination ../gitian.sigs/ ../endlesscoin/contrib/gitian-descriptors/gitian-osx-signer.yml
-	    mv build/out/endlesscoin-osx-signed.dmg ../endlesscoin-binaries/${VERSION}/endlesscoin-${VERSION}-osx.dmg
+	    ./bin/gbuild -i --commit signature=${COMMIT} ../Endlesscoin/contrib/gitian-descriptors/gitian-osx-signer.yml
+	    ./bin/gsign -p $signProg --signer $SIGNER --release ${VERSION}-osx-signed --destination ../gitian.sigs/ ../Endlesscoin/contrib/gitian-descriptors/gitian-osx-signer.yml
+	    mv build/out/Endlesscoin-osx-signed.dmg ../Endlesscoin-binaries/${VERSION}/Endlesscoin-${VERSION}-osx.dmg
 	fi
 	popd
 
