@@ -101,10 +101,10 @@ public:
         consensus.vDeployments[Consensus::DEPLOYMENT_SEGWIT].nTimeout = 1510704000; // November 15th, 2017.
 
         // The best chain should have at least this much work.
-        consensus.nMinimumChainWork = uint256S("0x00000000000000000000000000000000000000000000000001e94a3790b47131");
+        consensus.nMinimumChainWork = uint256S("0x0000000000000000000000000000000000000000000000096e1bf7c0169df47b");
 
         // By default assume that the signatures in ancestors of this block are valid.
-        consensus.defaultAssumeValid = uint256S("0x000000000000042afae1f582f7c45401937af63575c0089a6fa5e12822565631");
+        consensus.defaultAssumeValid = uint256S("0x0000000000000033b359a5caf51c15b1cb0f1f08bb72f78ad80bb838b1fa89c8");
 
         /**
          * The message start string is designed to be unlikely to occur in normal data.
@@ -154,15 +154,17 @@ public:
                 { 10574, uint256S("0x0000000000002a2d3804f470fca4a75700e900c0cf13aa05c19f511aae82b5e5")},
                 { 13970, uint256S("0x00000000000022f2cbbc34ebecd4cc34fe75bb4071081185973abcf68cc0737b")},
                 { 17048, uint256S("0x000000000000042afae1f582f7c45401937af63575c0089a6fa5e12822565631")},
+                { 24422, uint256S("0x0000000000000130fb86ded4c880b669c5736dda71f7f66c289aede0ff3b0e05")},
+                { 24500, uint256S("0x0000000000000033b359a5caf51c15b1cb0f1f08bb72f78ad80bb838b1fa89c8")},
             }
         };
 
         chainTxData = ChainTxData{
             // Data as of block 000000000000000000d97e53664d17967bd4ee50b23abb92e54a34eb222d15ae (height 478913).
-            1665081543, // * UNIX timestamp of last known number of transactions
-            17275,  // * total number of transactions between genesis and that timestamp
+            1665922612,         // * UNIX timestamp of last known number of transactions
+            28129,              // * total number of transactions between genesis and that timestamp
                         //   (the tx=... number in the SetBestChain debug.log lines)
-            0.01601773491963165 // * estimated number of transactions per second after that timestamp
+            0.1444684839727625  // * estimated number of transactions per second after that timestamp
         };
     }
 };
