@@ -15,7 +15,7 @@ out collectively by the network. EndessCoin Core is the name of open source
 software which enables the use of this currency.
 
 For more information, as well as an immediately useable, binary version of
-the EndessCoin Core software, see https://endlesscoin.org/en/download, or read the
+the EndessCoin Core software, see https://endlesschains.000webhostapp.com/en/download, or read the
 [original whitepaper](https://endlesschains.000webhostapp.com/endlesscoin.pdf).
 
 License

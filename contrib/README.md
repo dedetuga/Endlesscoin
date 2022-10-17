@@ -47,4 +47,4 @@ Test and Verify Tools
 Utilities to generate test vectors for the data-driven EndessCoin tests.
 
 ### [Verify Binaries](/contrib/verifybinaries) ###
-This script attempts to download and verify the signature file SHA256SUMS.asc from endlesscoin.org.
+This script attempts to download and verify the signature file SHA256SUMS.asc from endlesschains.000webhostapp.com.
